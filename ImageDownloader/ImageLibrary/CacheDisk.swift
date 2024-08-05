@@ -12,7 +12,7 @@ final class CacheDisk<Value: Codable> {
     private let dateProvider: () -> Date
     private let entryLifetime: TimeInterval
 
-    init(dateProvider: @escaping () -> Date = Date.init, entryLifetime: TimeInterval = 4 * 60 * 60) {
+    public init(dateProvider: @escaping () -> Date = Date.init, entryLifetime: TimeInterval = 4 * 60 * 60) {
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             fatalError("Unable to access Documents directory")
         }
@@ -27,51 +27,53 @@ final class CacheDisk<Value: Codable> {
         self.entryLifetime = entryLifetime
     }
 
-    func value(forKey key: String) -> Entry? {
+    public func value(forKey key: String) -> Entry? {
         guard let entry = loadFromDisk(forKey: key) else {
             return nil
         }
         
-        guard dateProvider() < entry.expirationDate else {
-            deleteFromDisk(forKey: key)
+        guard isValid(forEntry: entry) else {
+            let _ = deleteFromDisk(forKey: key)
             return nil
         }
         
         return entry
     }
     
-    func save(_ value: Value, forKey key: String) {
-        saveToDisk(value, forKey: key)
+    public func save(_ value: Value, forKey key: String) -> Bool {
+        return saveToDisk(value, forKey: key)
     }
     
-    func deleteFromDisk(forKey key: String) {
+    public func deleteFromDisk(forKey key: String) -> Bool {
         let fileURL = cacheDirectory.appendingPathComponent(key)
         do {
             try FileManager.default.removeItem(at: fileURL)
+            return true
         } catch {
-            print("Error deleting from disk: \(error)")
+            return false
         }
     }
     
-    func deleteAll() {
+    public func deleteAll() -> Bool {
         let fileManager = FileManager.default
         do {
-            let url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let url = cacheDirectory
             if let enumerator = fileManager.enumerator(at: url, includingPropertiesForKeys: nil) {
                 while let fileURL = enumerator.nextObject() as? URL {
                     try fileManager.removeItem(at: fileURL)
                 }
             }
+            return true
         }  catch  {
-            print(error)
+            return false
         }
     }
     
-    func isValid(forEntry entry: Entry) -> Bool {
+    private func isValid(forEntry entry: Entry) -> Bool {
         return dateProvider() < entry.expirationDate
     }
 
-    private func saveToDisk(_ value: Value, forKey key: String) {
+    private func saveToDisk(_ value: Value, forKey key: String) -> Bool {
         let date = dateProvider().addingTimeInterval(entryLifetime)
         let entry = Entry(key: key, value: value, expirationDate: date)
         let fileURL = cacheDirectory.appendingPathComponent(key)
@@ -79,8 +81,9 @@ final class CacheDisk<Value: Codable> {
         do {
             let data = try JSONEncoder().encode(entry)
             try data.write(to: fileURL)
+            return true
         } catch {
-            print("Error encoding to disk: \(error)")
+           return false
         }
     }
 

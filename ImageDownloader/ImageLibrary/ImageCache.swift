@@ -31,7 +31,7 @@ class ImageCache {
                 return
             }
                         
-            self.cache.save(data, forKey: url.absoluteString.replacingOccurrences(of: APIEnpoints.baseURLString, with: ""))
+            let _ = self.cache.save(data, forKey: url.absoluteString.replacingOccurrences(of: APIEnpoints.baseURLString, with: ""))
             DispatchQueue.main.async {
                 completion(image)
             }
@@ -40,8 +40,8 @@ class ImageCache {
     
     func deleteCache(with keys: [String]) {
         cacheQueue.async {
-            keys.forEach(self.cache.deleteFromDisk(forKey:))
-            self.cache.deleteAll()
+            keys.forEach{  let _ = self.cache.deleteFromDisk(forKey:$0)}
+            let _ =  self.cache.deleteAll()
         }
     }
 }
