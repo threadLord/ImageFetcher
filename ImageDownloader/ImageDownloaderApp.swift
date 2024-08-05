@@ -2,7 +2,7 @@
 //  ImageDownloaderApp.swift
 //  ImageDownloader
 //
-//  Created by Marko on 4.8.24..
+//  Created by Marko on 5.8.24..
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct ImageDownloaderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ImageListView()
         }
     }
 }

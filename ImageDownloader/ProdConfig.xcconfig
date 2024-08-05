@@ -1,0 +1,6 @@
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+TRANSFER_PROTOCOL = https
+BASE_URL = zipoapps-storage-test.nyc3.digitaloceanspaces.com/
+IMAGE_LIST = image_list.json

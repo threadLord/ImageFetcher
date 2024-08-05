@@ -1,10 +1,3 @@
-//
-//  ImageDownloaderTests.swift
-//  ImageDownloaderTests
-//
-//  Created by Marko on 4.8.24..
-//
-
 import XCTest
 @testable import ImageDownloader
 
