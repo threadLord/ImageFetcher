@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ImageCachingLibrary
 
 @Observable class ImageListViewViewModel {
     

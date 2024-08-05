@@ -13,8 +13,6 @@
 		AD3A43E32C5FB7B9009A2EFF /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43E22C5FB7B9009A2EFF /* ImageDownloaderTests.swift */; };
 		AD3A43ED2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43EC2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift */; };
 		AD3A43EF2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */; };
-		AD3A43FD2C5FB9DC009A2EFF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43FC2C5FB9DC009A2EFF /* ImageCache.swift */; };
-		AD3A44082C5FC77B009A2EFF /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44072C5FC77B009A2EFF /* AsyncImageView.swift */; };
 		AD3A440A2C5FCCAF009A2EFF /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */; };
 		AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A440C2C5FD947009A2EFF /* Configuration.swift */; };
 		AD3A44102C5FD97D009A2EFF /* APIEnpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A440F2C5FD97D009A2EFF /* APIEnpoints.swift */; };
@@ -27,8 +25,7 @@
 		AD3A44262C5FE0CB009A2EFF /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44252C5FE0CB009A2EFF /* RequestCreator.swift */; };
 		AD3A44292C5FE2DF009A2EFF /* ImageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44282C5FE2DF009A2EFF /* ImageAdapter.swift */; };
 		AD3A442B2C5FEB62009A2EFF /* ConfigKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A442A2C5FEB62009A2EFF /* ConfigKeys.swift */; };
-		AD3A442D2C6062E2009A2EFF /* CacheDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A442C2C6062E2009A2EFF /* CacheDisk.swift */; };
-		AD3A442F2C6064D3009A2EFF /* AsyncImageViewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A442E2C6064D3009A2EFF /* AsyncImageViewUIKit.swift */; };
+		AD715B272C60DA20008A586B /* ImageCachingLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AD715B262C60DA20008A586B /* ImageCachingLibrary */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +55,9 @@
 		AD3A43E82C5FB7B9009A2EFF /* ImageDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43EC2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderUITests.swift; sourceTree = "<group>"; };
 		AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		AD3A43FC2C5FB9DC009A2EFF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		AD3A44022C5FC4BF009A2EFF /* DevConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevConfig.xcconfig; sourceTree = "<group>"; };
 		AD3A44032C5FC4D4009A2EFF /* ProdConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdConfig.xcconfig; sourceTree = "<group>"; };
 		AD3A44042C5FC631009A2EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		AD3A44072C5FC77B009A2EFF /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		AD3A440C2C5FD947009A2EFF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		AD3A440F2C5FD97D009A2EFF /* APIEnpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnpoints.swift; sourceTree = "<group>"; };
@@ -75,8 +70,6 @@
 		AD3A44252C5FE0CB009A2EFF /* RequestCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCreator.swift; sourceTree = "<group>"; };
 		AD3A44282C5FE2DF009A2EFF /* ImageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdapter.swift; sourceTree = "<group>"; };
 		AD3A442A2C5FEB62009A2EFF /* ConfigKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKeys.swift; sourceTree = "<group>"; };
-		AD3A442C2C6062E2009A2EFF /* CacheDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDisk.swift; sourceTree = "<group>"; };
-		AD3A442E2C6064D3009A2EFF /* AsyncImageViewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageViewUIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD715B272C60DA20008A586B /* ImageCachingLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +105,7 @@
 				AD3A43E12C5FB7B9009A2EFF /* ImageDownloaderTests */,
 				AD3A43EB2C5FB7B9009A2EFF /* ImageDownloaderUITests */,
 				AD3A43CF2C5FB7B8009A2EFF /* Products */,
+				AD715B252C60DA20008A586B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +126,6 @@
 				AD3A440E2C5FD964009A2EFF /* Network */,
 				AD3A440B2C5FD921009A2EFF /* Utils */,
 				AD3A44042C5FC631009A2EFF /* Info.plist */,
-				AD3A43FB2C5FB9BC009A2EFF /* ImageLibrary */,
 				AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */,
 				AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */,
 				AD3A43D72C5FB7B9009A2EFF /* Preview Content */,
@@ -164,17 +158,6 @@
 				AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */,
 			);
 			path = ImageDownloaderUITests;
-			sourceTree = "<group>";
-		};
-		AD3A43FB2C5FB9BC009A2EFF /* ImageLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				AD3A43FC2C5FB9DC009A2EFF /* ImageCache.swift */,
-				AD3A44072C5FC77B009A2EFF /* AsyncImageView.swift */,
-				AD3A442C2C6062E2009A2EFF /* CacheDisk.swift */,
-				AD3A442E2C6064D3009A2EFF /* AsyncImageViewUIKit.swift */,
-			);
-			path = ImageLibrary;
 			sourceTree = "<group>";
 		};
 		AD3A43FE2C5FBE94009A2EFF /* Model */ = {
@@ -274,6 +257,13 @@
 			path = Adapters;
 			sourceTree = "<group>";
 		};
+		AD715B252C60DA20008A586B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +280,9 @@
 			dependencies = (
 			);
 			name = ImageDownloader;
+			packageProductDependencies = (
+				AD715B262C60DA20008A586B /* ImageCachingLibrary */,
+			);
 			productName = ImageDownloader;
 			productReference = AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +355,9 @@
 				Base,
 			);
 			mainGroup = AD3A43C52C5FB7B8009A2EFF;
+			packageReferences = (
+				AD715B242C60D99F008A586B /* XCRemoteSwiftPackageReference "ImageCacheLibrary" */,
+			);
 			productRefGroup = AD3A43CF2C5FB7B8009A2EFF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -406,8 +402,6 @@
 			files = (
 				AD3A44212C5FDF0B009A2EFF /* ImageModelNetwork.swift in Sources */,
 				AD3A44122C5FDD4A009A2EFF /* NetworkManager.swift in Sources */,
-				AD3A442F2C6064D3009A2EFF /* AsyncImageViewUIKit.swift in Sources */,
-				AD3A43FD2C5FB9DC009A2EFF /* ImageCache.swift in Sources */,
 				AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */,
 				AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */,
 				AD3A440A2C5FCCAF009A2EFF /* ImageListView.swift in Sources */,
@@ -419,8 +413,6 @@
 				AD3A441B2C5FDDF6009A2EFF /* ViewModel.swift in Sources */,
 				AD3A442B2C5FEB62009A2EFF /* ConfigKeys.swift in Sources */,
 				AD3A44242C5FDF7A009A2EFF /* ImageModel.swift in Sources */,
-				AD3A44082C5FC77B009A2EFF /* AsyncImageView.swift in Sources */,
-				AD3A442D2C6062E2009A2EFF /* CacheDisk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +752,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD715B242C60D99F008A586B /* XCRemoteSwiftPackageReference "ImageCacheLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/threadLord/ImageCacheLibrary.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD715B262C60DA20008A586B /* ImageCachingLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD715B242C60D99F008A586B /* XCRemoteSwiftPackageReference "ImageCacheLibrary" */;
+			productName = ImageCachingLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AD3A43C62C5FB7B8009A2EFF /* Project object */;
 }

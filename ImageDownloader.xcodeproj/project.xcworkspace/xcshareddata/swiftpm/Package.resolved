@@ -1,0 +1,15 @@
+{
+  "originHash" : "d50d5cf0f19ab75759a5fff0e89fd95c034b76fade5155783674c0a612a2d318",
+  "pins" : [
+    {
+      "identity" : "imagecachelibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/threadLord/ImageCacheLibrary.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "000489465adfb4d665476d4706acc9b56956c7f5"
+      }
+    }
+  ],
+  "version" : 3
+}
