@@ -23,8 +23,10 @@ struct AsyncImageView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(16)
                 .onAppear {
-                    ImageCache.shared.loadImage(url: url) { loadedImage in
-                        self.image = loadedImage
+                    if let key = url.absoluteString.components(separatedBy:"/").last {
+                        ImageCache.shared.loadImage(url: url, key: key) { loadedImage in
+                            self.image = loadedImage
+                        }
                     }
                 }
         }

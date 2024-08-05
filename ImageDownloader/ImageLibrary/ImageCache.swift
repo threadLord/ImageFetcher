@@ -12,26 +12,26 @@ class ImageCache {
     private var cache = CacheDisk<Data>()
     private let cacheQueue = DispatchQueue(label: "cacheQueue")
 
-    func loadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+    func loadImage(url: URL, key: String, completion: @escaping (UIImage?) -> Void) {
         cacheQueue.async {
-            if let cachedData = self.cache.value(forKey: url.absoluteString.replacingOccurrences(of: APIEnpoints.baseURLString, with: ""))?.value {
+            if let cachedData = self.cache.value(forKey: key)?.value {
                 DispatchQueue.main.async {
                     completion(UIImage(data: cachedData))
                 }
             } else {
-                self.downloadImage(url: url, completion: completion)
+                self.downloadImage(url: url, key: key, completion: completion)
             }
         }
     }
 
-    private func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+    private func downloadImage(url: URL, key: String, completion: @escaping (UIImage?) -> Void) {
         URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data, let image = UIImage(data: data) else {
                 completion(nil)
                 return
             }
                         
-            let _ = self.cache.save(data, forKey: url.absoluteString.replacingOccurrences(of: APIEnpoints.baseURLString, with: ""))
+            let _ = self.cache.save(data, forKey: key)
             DispatchQueue.main.async {
                 completion(image)
             }
