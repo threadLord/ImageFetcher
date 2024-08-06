@@ -10,6 +10,12 @@
 		AD1368492C62AB2900CCF647 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368482C62AB2900CCF647 /* ActionButton.swift */; };
 		AD13684C2C62ABC900CCF647 /* ActionImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */; };
 		AD13684E2C62AF2000CCF647 /* ImageViewBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */; };
+		AD1368512C62B22400CCF647 /* ImageLoaderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368502C62B22400CCF647 /* ImageLoaderCoordinator.swift */; };
+		AD1368542C62B25800CCF647 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368532C62B25800CCF647 /* Sheet.swift */; };
+		AD1368562C62B29C00CCF647 /* FullScreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368552C62B29C00CCF647 /* FullScreenCover.swift */; };
+		AD1368582C62B2B100CCF647 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368572C62B2B100CCF647 /* Screen.swift */; };
+		AD13685A2C62B41B00CCF647 /* ImageDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */; };
+		AD13685C2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */; };
 		AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */; };
 		AD3A43D62C5FB7B9009A2EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */; };
 		AD3A43D92C5FB7B9009A2EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D82C5FB7B9009A2EFF /* Preview Assets.xcassets */; };
@@ -52,6 +58,12 @@
 		AD1368482C62AB2900CCF647 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionImageModifier.swift; sourceTree = "<group>"; };
 		AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewBackGround.swift; sourceTree = "<group>"; };
+		AD1368502C62B22400CCF647 /* ImageLoaderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCoordinator.swift; sourceTree = "<group>"; };
+		AD1368532C62B25800CCF647 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
+		AD1368552C62B29C00CCF647 /* FullScreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCover.swift; sourceTree = "<group>"; };
+		AD1368572C62B2B100CCF647 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsScreen.swift; sourceTree = "<group>"; };
+		AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCoordinatorView.swift; sourceTree = "<group>"; };
 		AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderApp.swift; sourceTree = "<group>"; };
 		AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,8 +136,20 @@
 		AD13684F2C62B11000CCF647 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				AD1368522C62B23C00CCF647 /* Enums */,
+				AD1368502C62B22400CCF647 /* ImageLoaderCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AD1368522C62B23C00CCF647 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				AD1368532C62B25800CCF647 /* Sheet.swift */,
+				AD1368552C62B29C00CCF647 /* FullScreenCover.swift */,
+				AD1368572C62B2B100CCF647 /* Screen.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		AD3A43C52C5FB7B8009A2EFF = {
@@ -205,6 +229,8 @@
 				AD13684A2C62ABA000CCF647 /* Modifiers */,
 				AD1368472C62AB1700CCF647 /* Buttons */,
 				AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */,
+				AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */,
+				AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -436,18 +462,24 @@
 				AD3A44212C5FDF0B009A2EFF /* ImageModelNetwork.swift in Sources */,
 				AD3A44122C5FDD4A009A2EFF /* NetworkManager.swift in Sources */,
 				AD13684E2C62AF2000CCF647 /* ImageViewBackGround.swift in Sources */,
+				AD1368542C62B25800CCF647 /* Sheet.swift in Sources */,
 				AD13684C2C62ABC900CCF647 /* ActionImageModifier.swift in Sources */,
 				AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */,
 				AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */,
 				AD3A440A2C5FCCAF009A2EFF /* ImageListView.swift in Sources */,
 				AD3A44102C5FD97D009A2EFF /* APIEnpoints.swift in Sources */,
+				AD13685A2C62B41B00CCF647 /* ImageDetailsScreen.swift in Sources */,
 				AD3A44262C5FE0CB009A2EFF /* RequestCreator.swift in Sources */,
 				AD3A44292C5FE2DF009A2EFF /* ImageAdapter.swift in Sources */,
+				AD13685C2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift in Sources */,
 				AD3A44142C5FDD66009A2EFF /* NetworkManagerProtocol.swift in Sources */,
 				AD3A44172C5FDD94009A2EFF /* NetworkError.swift in Sources */,
+				AD1368562C62B29C00CCF647 /* FullScreenCover.swift in Sources */,
 				AD3A441B2C5FDDF6009A2EFF /* ViewModel.swift in Sources */,
+				AD1368582C62B2B100CCF647 /* Screen.swift in Sources */,
 				AD3A442B2C5FEB62009A2EFF /* ConfigKeys.swift in Sources */,
 				AD3A44242C5FDF7A009A2EFF /* ImageModel.swift in Sources */,
+				AD1368512C62B22400CCF647 /* ImageLoaderCoordinator.swift in Sources */,
 				AD1368492C62AB2900CCF647 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

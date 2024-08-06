@@ -10,11 +10,20 @@ import ImageCachingLibrary
 
 struct ImageListView: View {
     
+    @EnvironmentObject
+    private var coordinator: ImageLoaderCoordinator
+    
     var imageListViewViewModel: ImageListViewViewModel = ImageListViewViewModel()
+    
+    let layout = [
+        GridItem(alignment: .top),
+        GridItem(alignment: .top),
+        GridItem(alignment: .top)
+    ]
     
     var body: some View {
         ScrollView(.vertical) {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], spacing: 8) {
+            LazyVGrid(columns: layout, spacing: 8) {
                 ForEach(imageListViewViewModel.images) { image in
                     let url = URL(string: image.imageUrl)!
                     VStack(alignment: .leading, spacing: 8) {
@@ -24,6 +33,9 @@ struct ImageListView: View {
                             )
                         
                         Text("Id: \(image.id)")
+                    }
+                    .onTapGesture {
+                        coordinator.push(.imageDetails(model: image))
                     }
                 }
             }

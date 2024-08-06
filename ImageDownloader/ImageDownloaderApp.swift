@@ -11,7 +11,7 @@ import SwiftUI
 struct ImageDownloaderApp: App {
     var body: some Scene {
         WindowGroup {
-            ImageListView()
+            ImageLoaderCoordinatorView()
         }
     }
 }
