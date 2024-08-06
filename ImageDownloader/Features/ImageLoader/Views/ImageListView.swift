@@ -16,9 +16,9 @@ struct ImageListView: View {
     var imageListViewViewModel: ImageListViewViewModel = ImageListViewViewModel()
     
     let layout = [
-        GridItem(alignment: .top),
-        GridItem(alignment: .top),
-        GridItem(alignment: .top)
+        GridItem(alignment: .bottom),
+        GridItem(alignment: .bottom),
+        GridItem(alignment: .bottom)
     ]
     
     var body: some View {
@@ -39,8 +39,8 @@ struct ImageListView: View {
                     }
                 }
             }
-            .padding()
         }
+        .padding()
         .overlay {
             VStack {
                 

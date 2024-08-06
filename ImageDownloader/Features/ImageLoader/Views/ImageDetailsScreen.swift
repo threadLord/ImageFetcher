@@ -26,6 +26,7 @@ struct ImageDetailsScreen: View {
                 
                 Text("Id: \(model.id)")
             }
+            
             .frame(minHeight: 400)
             
             Spacer()
@@ -41,5 +42,6 @@ struct ImageDetailsScreen: View {
         ImageDetailsScreen(model: ImageModel(id: 0,
                                              imageUrl:  "https://zipoapps-storage-test.nyc3.digitaloceanspaces.com/17_4691_besplatnye_kartinki_volkswagen_golf_1920x1080.jpg")
         )
+        .padding(16)
     }
 }
