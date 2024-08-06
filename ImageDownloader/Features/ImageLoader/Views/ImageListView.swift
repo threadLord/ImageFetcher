@@ -20,9 +20,7 @@ struct ImageListView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         AsyncImageView(url: url, placeholder: Image(systemName: "photo").resizable())
                             .background(
-                                RoundedRectangle(cornerRadius: 4, style: .circular)
-                                    .fill(.black.opacity(0.9))
-                                    .shadow(color: .white, radius: 1)
+                                ImageViewBackGround()
                             )
                         
                         Text("Id: \(image.id)")
@@ -37,41 +35,14 @@ struct ImageListView: View {
                 Spacer()
                 
                 HStack {
-                    
                     Button(action: imageListViewViewModel.deleteCache) {
-                        ZStack {
-                            Color.black.saturation(0.9)
-                                .clipShape(Circle())
-                                .shadow(color: .white, radius: 6)
-                            
-                            Image(systemName: "trash")
-                                .renderingMode(.template)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 32, height: 32)
-                                .foregroundStyle(.white)
-                            
-                        }
-                        .frame(width: 64, height: 64)
+                        ActionButtonLabel(systemName: "trash")
                     }
                     
                     Spacer()
                     
                     Button(action: imageListViewViewModel.fetchImages) {
-                        ZStack {
-                            Color.black.saturation(0.9)
-                                .clipShape(Circle())
-                                .shadow(color: .white, radius: 6)
-                            
-                            Image(systemName: "arrow.circlepath")
-                                .renderingMode(.template)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 32, height: 32)
-                                .foregroundStyle(.white)
-                            
-                        }
-                        .frame(width: 64, height: 64)
+                        ActionButtonLabel(systemName: "arrow.circlepath")
                     }
                 }
                 .padding(24)

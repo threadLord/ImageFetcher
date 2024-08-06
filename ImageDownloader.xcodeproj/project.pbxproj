@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1368492C62AB2900CCF647 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368482C62AB2900CCF647 /* ActionButton.swift */; };
+		AD13684C2C62ABC900CCF647 /* ActionImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */; };
+		AD13684E2C62AF2000CCF647 /* ImageViewBackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */; };
 		AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */; };
 		AD3A43D62C5FB7B9009A2EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */; };
 		AD3A43D92C5FB7B9009A2EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D82C5FB7B9009A2EFF /* Preview Assets.xcassets */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD1368482C62AB2900CCF647 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionImageModifier.swift; sourceTree = "<group>"; };
+		AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewBackGround.swift; sourceTree = "<group>"; };
 		AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderApp.swift; sourceTree = "<group>"; };
 		AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +104,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD1368472C62AB1700CCF647 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				AD1368482C62AB2900CCF647 /* ActionButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AD13684A2C62ABA000CCF647 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */,
+				AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		AD13684F2C62B11000CCF647 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		AD3A43C52C5FB7B8009A2EFF = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +202,8 @@
 		AD3A44012C5FC471009A2EFF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD13684A2C62ABA000CCF647 /* Modifiers */,
+				AD1368472C62AB1700CCF647 /* Buttons */,
 				AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */,
 			);
 			path = Views;
@@ -217,6 +249,7 @@
 		AD3A44192C5FDDCC009A2EFF /* ImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				AD13684F2C62B11000CCF647 /* Coordinator */,
 				AD3A44272C5FE2CE009A2EFF /* Adapters */,
 				AD3A43FE2C5FBE94009A2EFF /* Model */,
 				AD3A441C2C5FDDFC009A2EFF /* ViewModel */,
@@ -402,6 +435,8 @@
 			files = (
 				AD3A44212C5FDF0B009A2EFF /* ImageModelNetwork.swift in Sources */,
 				AD3A44122C5FDD4A009A2EFF /* NetworkManager.swift in Sources */,
+				AD13684E2C62AF2000CCF647 /* ImageViewBackGround.swift in Sources */,
+				AD13684C2C62ABC900CCF647 /* ActionImageModifier.swift in Sources */,
 				AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */,
 				AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */,
 				AD3A440A2C5FCCAF009A2EFF /* ImageListView.swift in Sources */,
@@ -413,6 +448,7 @@
 				AD3A441B2C5FDDF6009A2EFF /* ViewModel.swift in Sources */,
 				AD3A442B2C5FEB62009A2EFF /* ConfigKeys.swift in Sources */,
 				AD3A44242C5FDF7A009A2EFF /* ImageModel.swift in Sources */,
+				AD1368492C62AB2900CCF647 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
