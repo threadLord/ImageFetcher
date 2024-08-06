@@ -66,9 +66,10 @@ class ImageLoaderCoordinator: ObservableObject {
     @ViewBuilder
     func buld(fullscreen: FullScreenCover) -> some View {
         switch fullscreen {
-        case .none:
-            EmptyView()
+        case .fetchError:
+            ImageErrorView() {
+                self.fullScreenCover = nil
+            }
         }
     }
 }
-

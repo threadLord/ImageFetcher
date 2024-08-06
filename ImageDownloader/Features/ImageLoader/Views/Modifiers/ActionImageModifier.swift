@@ -17,11 +17,3 @@ extension Image {
             .foregroundStyle(color)            
     }
 }
-
-#Preview {
-    ZStack {
-        Color.black.brightness(0.6)
-        Image(systemName: "arrow.circlepath")
-            .actionImage()
-    }
-}

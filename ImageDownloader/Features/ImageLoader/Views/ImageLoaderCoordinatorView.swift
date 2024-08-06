@@ -23,6 +23,9 @@ struct ImageLoaderCoordinatorView: View {
                 .fullScreenCover(item: $coordinator.fullScreenCover) { fullscreenCover in
                     coordinator.buld(fullscreen: fullscreenCover)
                 }
+                .transaction { transaction in
+                    transaction.disablesAnimations = true
+                }
         }
         .environmentObject(coordinator)
     }

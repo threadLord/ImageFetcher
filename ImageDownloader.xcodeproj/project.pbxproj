@@ -16,6 +16,9 @@
 		AD1368582C62B2B100CCF647 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368572C62B2B100CCF647 /* Screen.swift */; };
 		AD13685A2C62B41B00CCF647 /* ImageDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */; };
 		AD13685C2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */; };
+		AD13685E2C62D53F00CCF647 /* ImageErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685D2C62D53F00CCF647 /* ImageErrorView.swift */; };
+		AD1368602C62E50600CCF647 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685F2C62E50600CCF647 /* Text+Extensions.swift */; };
+		AD1368622C62E6CD00CCF647 /* ReadableTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */; };
 		AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */; };
 		AD3A43D62C5FB7B9009A2EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */; };
 		AD3A43D92C5FB7B9009A2EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D82C5FB7B9009A2EFF /* Preview Assets.xcassets */; };
@@ -64,6 +67,9 @@
 		AD1368572C62B2B100CCF647 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsScreen.swift; sourceTree = "<group>"; };
 		AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCoordinatorView.swift; sourceTree = "<group>"; };
+		AD13685D2C62D53F00CCF647 /* ImageErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageErrorView.swift; sourceTree = "<group>"; };
+		AD13685F2C62E50600CCF647 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
+		AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTextModifier.swift; sourceTree = "<group>"; };
 		AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderApp.swift; sourceTree = "<group>"; };
 		AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 			children = (
 				AD13684B2C62ABC900CCF647 /* ActionImageModifier.swift */,
 				AD13684D2C62AF2000CCF647 /* ImageViewBackGround.swift */,
+				AD13685F2C62E50600CCF647 /* Text+Extensions.swift */,
+				AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */,
 				AD1368592C62B41B00CCF647 /* ImageDetailsScreen.swift */,
 				AD13685B2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift */,
+				AD13685D2C62D53F00CCF647 /* ImageErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,10 +468,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1368602C62E50600CCF647 /* Text+Extensions.swift in Sources */,
 				AD3A44212C5FDF0B009A2EFF /* ImageModelNetwork.swift in Sources */,
 				AD3A44122C5FDD4A009A2EFF /* NetworkManager.swift in Sources */,
 				AD13684E2C62AF2000CCF647 /* ImageViewBackGround.swift in Sources */,
 				AD1368542C62B25800CCF647 /* Sheet.swift in Sources */,
+				AD13685E2C62D53F00CCF647 /* ImageErrorView.swift in Sources */,
 				AD13684C2C62ABC900CCF647 /* ActionImageModifier.swift in Sources */,
 				AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */,
 				AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */,
@@ -474,6 +485,7 @@
 				AD13685C2C62B5CA00CCF647 /* ImageLoaderCoordinatorView.swift in Sources */,
 				AD3A44142C5FDD66009A2EFF /* NetworkManagerProtocol.swift in Sources */,
 				AD3A44172C5FDD94009A2EFF /* NetworkError.swift in Sources */,
+				AD1368622C62E6CD00CCF647 /* ReadableTextModifier.swift in Sources */,
 				AD1368562C62B29C00CCF647 /* FullScreenCover.swift in Sources */,
 				AD3A441B2C5FDDF6009A2EFF /* ViewModel.swift in Sources */,
 				AD1368582C62B2B100CCF647 /* Screen.swift in Sources */,

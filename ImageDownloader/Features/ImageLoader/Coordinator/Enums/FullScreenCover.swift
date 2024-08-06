@@ -12,5 +12,5 @@ enum FullScreenCover: Identifiable {
         return self
     }
     
-    case none
+    case fetchError
 }

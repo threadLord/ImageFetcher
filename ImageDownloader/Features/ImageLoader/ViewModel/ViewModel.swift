@@ -8,8 +8,9 @@
 import Foundation
 import ImageCachingLibrary
 
-@Observable class ImageListViewViewModel {
+class ImageListViewViewModel: ObservableObject {
     
+    @Published
     var images: [ImageModel] = []
     
     var networkError: NetworkError?

@@ -13,6 +13,7 @@ struct ImageListView: View {
     @EnvironmentObject
     private var coordinator: ImageLoaderCoordinator
     
+    @StateObject
     var imageListViewViewModel: ImageListViewViewModel = ImageListViewViewModel()
     
     let layout = [
@@ -27,6 +28,7 @@ struct ImageListView: View {
                 ForEach(imageListViewViewModel.images) { image in
                     let url = URL(string: image.imageUrl)!
                     VStack(alignment: .leading, spacing: 8) {
+                        
                         AsyncImageView(url: url, placeholder: Image(systemName: "photo").resizable())
                             .background(
                                 ImageViewBackGround()
@@ -63,6 +65,17 @@ struct ImageListView: View {
         .background(
             Color.black
         )
+        .onChange(of: imageListViewViewModel.networkError) { old, newValue in
+            if newValue != nil {
+                coordinator.present(fullScreenCover: .fetchError)
+            }
+            
+        }
+        .onChange(of: coordinator.fullScreenCover) { old, newValue in
+            if newValue == nil {
+                imageListViewViewModel.networkError = nil
+            }
+        }
         .onAppear {
             imageListViewViewModel.fetchImages()
         }
