@@ -19,14 +19,22 @@ struct ImageDetailsScreen: View {
         let url = URL(string: model.imageUrl)!
         VStack {
             VStack(alignment: .leading, spacing: 8) {
-                AsyncImageView(url: url, placeholder: Image(systemName: "photo").resizable())
-                    .background(
-                        ImageViewBackGround()
-                    )
+                AsyncImageView(url: url, 
+                               placeholder: {
+                                    Image(systemName: "photo").resizable()
+                               },
+                               imageClosure: { fetchedImage in
+                                    Image(uiImage: fetchedImage)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                }
+                )
+                .background(
+                    ImageViewBackGround()
+                )
                 
                 Text("Id: \(model.id)")
             }
-            
             .frame(minHeight: 400)
             
             Spacer()

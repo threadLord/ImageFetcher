@@ -29,10 +29,24 @@ struct ImageListView: View {
                     let url = URL(string: image.imageUrl)!
                     VStack(alignment: .leading, spacing: 8) {
                         
-                        AsyncImageView(url: url, placeholder: Image(systemName: "photo").resizable())
-                            .background(
-                                ImageViewBackGround()
-                            )
+                        AsyncImageView(url: url, 
+                                       placeholder: {
+                                            Image(systemName: "photo")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(height: 100)
+                                            
+                                        }, 
+                                       imageClosure: { fetchedImage in
+                                            Image(uiImage: fetchedImage)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(height: 100)
+                                        }
+                        )
+                        .background(
+                            ImageViewBackGround()
+                        )
                         
                         Text("Id: \(image.id)")
                     }
@@ -45,7 +59,6 @@ struct ImageListView: View {
         .padding()
         .overlay {
             VStack {
-                
                 Spacer()
                 
                 HStack {
