@@ -19,6 +19,8 @@
 		AD13685E2C62D53F00CCF647 /* ImageErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685D2C62D53F00CCF647 /* ImageErrorView.swift */; };
 		AD1368602C62E50600CCF647 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD13685F2C62E50600CCF647 /* Text+Extensions.swift */; };
 		AD1368622C62E6CD00CCF647 /* ReadableTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */; };
+		AD1368662C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368652C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift */; };
+		AD1368692C62EC0100CCF647 /* RequestCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */; };
 		AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */; };
 		AD3A43D62C5FB7B9009A2EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */; };
 		AD3A43D92C5FB7B9009A2EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D82C5FB7B9009A2EFF /* Preview Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		AD13685D2C62D53F00CCF647 /* ImageErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageErrorView.swift; sourceTree = "<group>"; };
 		AD13685F2C62E50600CCF647 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTextModifier.swift; sourceTree = "<group>"; };
+		AD1368652C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCoordinatorTests.swift; sourceTree = "<group>"; };
+		AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCreatorTests.swift; sourceTree = "<group>"; };
 		AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderApp.swift; sourceTree = "<group>"; };
 		AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +164,31 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		AD1368632C62EA1000CCF647 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AD1368672C62EBDE00CCF647 /* Network */,
+				AD1368642C62EA1A00CCF647 /* Coordinator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AD1368642C62EA1A00CCF647 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AD1368652C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AD1368672C62EBDE00CCF647 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AD3A43C52C5FB7B8009A2EFF = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +237,7 @@
 		AD3A43E12C5FB7B9009A2EFF /* ImageDownloaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD1368632C62EA1000CCF647 /* Features */,
 				AD3A43E22C5FB7B9009A2EFF /* ImageDownloaderTests.swift */,
 			);
 			path = ImageDownloaderTests;
@@ -500,7 +530,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD1368692C62EC0100CCF647 /* RequestCreatorTests.swift in Sources */,
 				AD3A43E32C5FB7B9009A2EFF /* ImageDownloaderTests.swift in Sources */,
+				AD1368662C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
