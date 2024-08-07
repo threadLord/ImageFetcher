@@ -39,6 +39,10 @@
 		AD3A44262C5FE0CB009A2EFF /* RequestCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44252C5FE0CB009A2EFF /* RequestCreator.swift */; };
 		AD3A44292C5FE2DF009A2EFF /* ImageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44282C5FE2DF009A2EFF /* ImageAdapter.swift */; };
 		AD3A442B2C5FEB62009A2EFF /* ConfigKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A442A2C5FEB62009A2EFF /* ConfigKeys.swift */; };
+		AD5D982D2C636E470095BC3B /* StubUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D982C2C636E470095BC3B /* StubUrlProtocol.swift */; };
+		AD5D982F2C636E840095BC3B /* URLSessionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D982E2C636E840095BC3B /* URLSessionsTests.swift */; };
+		AD5D98312C63822B0095BC3B /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D98302C63822B0095BC3B /* NetworkManagerTests.swift */; };
+		AD5D98342C639DF30095BC3B /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D98332C639DF30095BC3B /* ConfigurationTests.swift */; };
 		AD715B272C60DA20008A586B /* ImageCachingLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = AD715B262C60DA20008A586B /* ImageCachingLibrary */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,10 @@
 		AD3A44252C5FE0CB009A2EFF /* RequestCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCreator.swift; sourceTree = "<group>"; };
 		AD3A44282C5FE2DF009A2EFF /* ImageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdapter.swift; sourceTree = "<group>"; };
 		AD3A442A2C5FEB62009A2EFF /* ConfigKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKeys.swift; sourceTree = "<group>"; };
+		AD5D982C2C636E470095BC3B /* StubUrlProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubUrlProtocol.swift; sourceTree = "<group>"; };
+		AD5D982E2C636E840095BC3B /* URLSessionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionsTests.swift; sourceTree = "<group>"; };
+		AD5D98302C63822B0095BC3B /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		AD5D98332C639DF30095BC3B /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */,
+				AD5D982C2C636E470095BC3B /* StubUrlProtocol.swift */,
+				AD5D982E2C636E840095BC3B /* URLSessionsTests.swift */,
+				AD5D98302C63822B0095BC3B /* NetworkManagerTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,6 +248,7 @@
 		AD3A43E12C5FB7B9009A2EFF /* ImageDownloaderTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD5D98322C639DDB0095BC3B /* Utils */,
 				AD1368632C62EA1000CCF647 /* Features */,
 				AD3A43E22C5FB7B9009A2EFF /* ImageDownloaderTests.swift */,
 			);
@@ -353,6 +365,14 @@
 				AD3A44282C5FE2DF009A2EFF /* ImageAdapter.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		AD5D98322C639DDB0095BC3B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D98332C639DF30095BC3B /* ConfigurationTests.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		AD715B252C60DA20008A586B /* Frameworks */ = {
@@ -530,9 +550,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5D98312C63822B0095BC3B /* NetworkManagerTests.swift in Sources */,
 				AD1368692C62EC0100CCF647 /* RequestCreatorTests.swift in Sources */,
+				AD5D982F2C636E840095BC3B /* URLSessionsTests.swift in Sources */,
+				AD5D98342C639DF30095BC3B /* ConfigurationTests.swift in Sources */,
 				AD3A43E32C5FB7B9009A2EFF /* ImageDownloaderTests.swift in Sources */,
 				AD1368662C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift in Sources */,
+				AD5D982D2C636E470095BC3B /* StubUrlProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
