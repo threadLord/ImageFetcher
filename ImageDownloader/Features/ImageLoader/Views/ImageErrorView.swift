@@ -29,6 +29,7 @@ struct ImageErrorView: View {
                         Text("Ok")
                             .okButton()
                     }
+                    .accessibilityIdentifier("image_error_view_ok_button")
                     .padding()
                 }
             }
@@ -38,6 +39,7 @@ struct ImageErrorView: View {
                 Color.black.saturation(0.7)
                     .ignoresSafeArea()
             }
+            .accessibilityIdentifier("image_error_view_background_color")
     }
 }
 

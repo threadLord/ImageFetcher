@@ -70,6 +70,7 @@ class ImageLoaderCoordinator: ObservableObject {
             ImageErrorView() {
                 self.fullScreenCover = nil
             }
+            .accessibilityIdentifier("image_error")
         }
     }
 }

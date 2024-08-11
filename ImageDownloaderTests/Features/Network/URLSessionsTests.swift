@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import ImageDownloader
 
 final class URLSessionsTests: XCTestCase {
     

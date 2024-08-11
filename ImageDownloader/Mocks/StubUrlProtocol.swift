@@ -5,6 +5,7 @@
 //  Created by Marko on 7.8.24..
 //
 
+#if DEBUG
 import Foundation
 
 class StubUrlProtocol: URLProtocol {
@@ -44,3 +45,4 @@ class StubUrlProtocol: URLProtocol {
 
     override func stopLoading() { }
 }
+#endif

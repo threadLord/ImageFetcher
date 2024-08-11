@@ -29,16 +29,19 @@ struct ImageDetailsScreen: View {
                                             .aspectRatio(contentMode: .fit)
                                 }
                 )
+                .accessibilityIdentifier("async_image_view_id_\(model.id)")
                 .background(
                     ImageViewBackGround()
                 )
                 
                 Text("Id: \(model.id)")
+                    .accessibilityIdentifier("imageDetails_id_\(model.id)")
             }
             .frame(minHeight: 400)
             
             Spacer()
         }
+        .accessibilityIdentifier("image_details_VStack")
     }
 }
 

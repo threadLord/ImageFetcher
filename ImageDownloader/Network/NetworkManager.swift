@@ -17,7 +17,7 @@ struct NetworkManager: NetworkManagerProtocol {
     
     func upload<T>(request: URLRequest, data: Data, type: T.Type) async throws -> T where T : Decodable, T : Encodable {
         do {
-            let (data, response) = try await session.upload(for: request, from: data)
+            let (data, response) = try await self.session.upload(for: request, from: data)
             
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {
@@ -38,7 +38,7 @@ struct NetworkManager: NetworkManagerProtocol {
     
     func download<T: Decodable>(request: URLRequest, type: T.Type) async throws -> T {
         do {
-            let (data, response) = try await session.data(for: request)
+            let (data, response) = try await self.session.data(for: request)
             
             guard let httpResponse = response as? HTTPURLResponse,
                   (200...299).contains(httpResponse.statusCode) else {

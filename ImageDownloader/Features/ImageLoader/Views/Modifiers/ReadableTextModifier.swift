@@ -22,5 +22,6 @@ struct ReadableTextModifier: ViewModifier {
         content
             .foregroundStyle(color)
             .shadow(color: shadowColor, radius: radius)
+            .accessibilityIdentifier("ReadableTextModifier")
     }
 }

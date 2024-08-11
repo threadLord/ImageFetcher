@@ -14,7 +14,31 @@ struct ImageListView: View {
     private var coordinator: ImageLoaderCoordinator
     
     @StateObject
-    var imageListViewViewModel: ImageListViewViewModel = ImageListViewViewModel()
+    var imageListViewViewModel: ImageListViewViewModel
+    
+    init(imageListViewViewModel: ImageListViewViewModel = ImageListViewViewModel()) {
+        
+        #if DEBUG
+        
+        if UITestingHelper.isUITesting {
+            var mock : NetworkManagerProtocol {
+                if UITestingHelper.isNetworkingSuccessful {
+                    return NetworkManagersImageMOCKSProvider.getNewtorkSuccess()
+                } else {
+                    return NetworkManagersImageMOCKSProvider.getNewtorkNoData()
+                }
+            }
+
+            let vm = ImageListViewViewModel(networkManager: mock)
+            self._imageListViewViewModel = StateObject(wrappedValue: vm)
+        } else {
+            self._imageListViewViewModel = StateObject(wrappedValue: imageListViewViewModel)
+        }
+        
+        #else
+        self._imageListViewViewModel = StateObject(wrappedValue: imageListViewViewModel)
+        #endif
+    }
     
     let layout = [
         GridItem(alignment: .bottom),
@@ -53,8 +77,10 @@ struct ImageListView: View {
                     .onTapGesture {
                         coordinator.push(.imageDetails(model: image))
                     }
+                    .accessibilityIdentifier("item_\(image.id)")
                 }
             }
+            .accessibilityIdentifier("imageGrid")
         }
         .padding()
         .overlay {
@@ -65,12 +91,14 @@ struct ImageListView: View {
                     Button(action: imageListViewViewModel.deleteCache) {
                         ActionButtonLabel(systemName: "trash")
                     }
+                    .accessibilityIdentifier("button_trash")
                     
                     Spacer()
                     
                     Button(action: imageListViewViewModel.fetchImages) {
                         ActionButtonLabel(systemName: "arrow.circlepath")
                     }
+                    .accessibilityIdentifier("button_refresh")
                 }
                 .padding(24)
             }

@@ -27,6 +27,7 @@ struct ImageLoaderCoordinatorView: View {
                     transaction.disablesAnimations = true
                 }
         }
+        .accessibilityIdentifier("navigation_stack")
         .environmentObject(coordinator)
     }
 }

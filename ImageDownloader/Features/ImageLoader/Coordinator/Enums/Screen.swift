@@ -24,8 +24,7 @@ enum Screen: Identifiable, Hashable, Equatable {
         case .imageList:
             hasher.combine("imageList")
         case .imageDetails(let model):
-            hasher.combine("imageDetails")
-            hasher.combine(model.id)
+            hasher.combine("imageDetails" + "\(model.id)" + "\(model.imageUrl)")
         }
     }
 }
