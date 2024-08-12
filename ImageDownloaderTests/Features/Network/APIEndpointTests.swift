@@ -9,14 +9,12 @@ import XCTest
 @testable import ImageDownloader
 
 final class APIEndpointTests: XCTestCase {
-
-    
     // MARK: - Test transferProtocol
     
     func testTransferProtocol_ExpectedProtocol_ReturnEqualValues() {
         // Given
         let expectedProtocol = "https://"
-        
+
         // When
         let actualProtocol = APIEnpoints.transferProtocol
         

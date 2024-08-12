@@ -17,10 +17,15 @@ class ImageListViewViewModel: ObservableObject {
     
     private var networkManager: NetworkManagerProtocol
     private var adapter: ImageAdapterProtocol
+    private var imagelibraryWrapper: ImageLibraryWrapper
     
-    init(networkManager: NetworkManagerProtocol = NetworkManager(), adapter: ImageAdapterProtocol = ImageAdapter()) {
+    init(networkManager: NetworkManagerProtocol = NetworkManager(),
+         adapter: ImageAdapterProtocol = ImageAdapter(),
+         imagelibraryWrapper: ImageLibraryWrapper = ImageLibraryWrapper()) {
+        
         self.networkManager = networkManager
         self.adapter = adapter
+        self.imagelibraryWrapper = imagelibraryWrapper
     }
     
     func fetchImages() {
@@ -47,6 +52,6 @@ class ImageListViewViewModel: ObservableObject {
     }
     
     func deleteCache() {
-        ImageCache.shared.deleteCache(with: images.map({ $0.imageUrl }))
+        imagelibraryWrapper.deleteCache(with: images.map{ $0.imageUrl })
     }
 }

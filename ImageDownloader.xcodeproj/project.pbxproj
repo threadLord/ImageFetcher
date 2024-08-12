@@ -24,6 +24,8 @@
 		AD1368622C62E6CD00CCF647 /* ReadableTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */; };
 		AD1368662C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368652C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift */; };
 		AD1368692C62EC0100CCF647 /* RequestCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */; };
+		AD27677E2C6A66FB002A466D /* ImageLibraryWrapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD27677D2C6A66FB002A466D /* ImageLibraryWrapperProtocol.swift */; };
+		AD2767802C6A67D5002A466D /* ImageLibraryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD27677F2C6A67D5002A466D /* ImageLibraryWrapper.swift */; };
 		AD2ABB352C6575DB00A3D668 /* StubUrlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D982C2C636E470095BC3B /* StubUrlProtocol.swift */; };
 		AD2ABB372C65791300A3D668 /* NetworkingManagerImageResponseMOCKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2ABB362C65791300A3D668 /* NetworkingManagerImageResponseMOCKProvider.swift */; };
 		AD3A43D22C5FB7B8009A2EFF /* ImageDownloaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */; };
@@ -92,6 +94,8 @@
 		AD1368612C62E6CD00CCF647 /* ReadableTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableTextModifier.swift; sourceTree = "<group>"; };
 		AD1368652C62EA4500CCF647 /* ImageLoaderCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderCoordinatorTests.swift; sourceTree = "<group>"; };
 		AD1368682C62EC0100CCF647 /* RequestCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCreatorTests.swift; sourceTree = "<group>"; };
+		AD27677D2C6A66FB002A466D /* ImageLibraryWrapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryWrapperProtocol.swift; sourceTree = "<group>"; };
+		AD27677F2C6A67D5002A466D /* ImageLibraryWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLibraryWrapper.swift; sourceTree = "<group>"; };
 		AD2ABB362C65791300A3D668 /* NetworkingManagerImageResponseMOCKProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerImageResponseMOCKProvider.swift; sourceTree = "<group>"; };
 		AD3A43CE2C5FB7B8009A2EFF /* ImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43D12C5FB7B8009A2EFF /* ImageDownloaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderApp.swift; sourceTree = "<group>"; };
@@ -249,6 +253,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		AD27677C2C6A66D3002A466D /* ImageLibraryWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				AD27677D2C6A66FB002A466D /* ImageLibraryWrapperProtocol.swift */,
+				AD27677F2C6A67D5002A466D /* ImageLibraryWrapper.swift */,
+			);
+			path = ImageLibraryWrapper;
+			sourceTree = "<group>";
+		};
 		AD2ABB322C65746900A3D668 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +403,7 @@
 		AD3A44192C5FDDCC009A2EFF /* ImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				AD27677C2C6A66D3002A466D /* ImageLibraryWrapper */,
 				AD13684F2C62B11000CCF647 /* Coordinator */,
 				AD3A44272C5FE2CE009A2EFF /* Adapters */,
 				AD3A43FE2C5FBE94009A2EFF /* Model */,
@@ -620,8 +634,10 @@
 				AD3A44142C5FDD66009A2EFF /* NetworkManagerProtocol.swift in Sources */,
 				AD2ABB372C65791300A3D668 /* NetworkingManagerImageResponseMOCKProvider.swift in Sources */,
 				AD3A44172C5FDD94009A2EFF /* NetworkError.swift in Sources */,
+				AD27677E2C6A66FB002A466D /* ImageLibraryWrapperProtocol.swift in Sources */,
 				AD1368622C62E6CD00CCF647 /* ReadableTextModifier.swift in Sources */,
 				ADD1533E2C67FDC600468850 /* URLSessionProvider.swift in Sources */,
+				AD2767802C6A67D5002A466D /* ImageLibraryWrapper.swift in Sources */,
 				AD1368562C62B29C00CCF647 /* FullScreenCover.swift in Sources */,
 				AD3A441B2C5FDDF6009A2EFF /* ViewModel.swift in Sources */,
 				ADE7305A2C656F6500E454B3 /* AppDelegate.swift in Sources */,
