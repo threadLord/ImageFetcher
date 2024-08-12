@@ -32,7 +32,6 @@
 		AD3A43D62C5FB7B9009A2EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D52C5FB7B9009A2EFF /* Assets.xcassets */; };
 		AD3A43D92C5FB7B9009A2EFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD3A43D82C5FB7B9009A2EFF /* Preview Assets.xcassets */; };
 		AD3A43E32C5FB7B9009A2EFF /* ImageDownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43E22C5FB7B9009A2EFF /* ImageDownloaderTests.swift */; };
-		AD3A43ED2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43EC2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift */; };
 		AD3A43EF2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */; };
 		AD3A440A2C5FCCAF009A2EFF /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A44092C5FCCAF009A2EFF /* ImageListView.swift */; };
 		AD3A440D2C5FD947009A2EFF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A440C2C5FD947009A2EFF /* Configuration.swift */; };
@@ -104,7 +103,6 @@
 		AD3A43DE2C5FB7B9009A2EFF /* ImageDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3A43E22C5FB7B9009A2EFF /* ImageDownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTests.swift; sourceTree = "<group>"; };
 		AD3A43E82C5FB7B9009A2EFF /* ImageDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD3A43EC2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderUITests.swift; sourceTree = "<group>"; };
 		AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AD3A44022C5FC4BF009A2EFF /* DevConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DevConfig.xcconfig; sourceTree = "<group>"; };
 		AD3A44032C5FC4D4009A2EFF /* ProdConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ProdConfig.xcconfig; sourceTree = "<group>"; };
@@ -335,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				ADE730532C65686600E454B3 /* ImageList */,
-				AD3A43EC2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift */,
 				AD3A43EE2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift */,
 			);
 			path = ImageDownloaderUITests;
@@ -671,7 +668,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD09E4872C67738C00094760 /* ImageListFailureUITests.swift in Sources */,
-				AD3A43ED2C5FB7B9009A2EFF /* ImageDownloaderUITests.swift in Sources */,
 				AD3A43EF2C5FB7B9009A2EFF /* ImageDownloaderUITestsLaunchTests.swift in Sources */,
 				ADE730552C65688A00E454B3 /* ImageListUITests.swift in Sources */,
 			);
